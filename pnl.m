@@ -1,27 +1,25 @@
 clear;
 
-rent = 12000;
 tools = 5000;
-prototype = 90000;
 server = 15000;
 extra = 5000;
 
-oneoff = rent + tools + prototype + server + extra;
+oneoff = tools + server + extra;
 
 % -------------------------------------------------
 
 devicesO = 10;
 devicesE = 0;
-transactionspm = 31;
+transactionspm = 10;
 transactioncost = 0.1;
-salarypm = 7500;
+salarypm = 15000;
 
 % -------------------------------------------------
 
 numcompanies = 10;
 numdevicesO = 10;
 pricedeviceS = 50;
-pricedeviceM = 30;
+pricedeviceM = 20;
 transactionprice = 0.15;
 
 % --------------------------------------------------
@@ -43,7 +41,7 @@ profit = cumsum(revenue-ongoing)-oneoff;
 plot(profit)
 grid on
 xlabel('Month')
-ylabel('Profit (£)')
+ylabel('Profit (Â£)')
 legend('Estimated profit')
 % hold on
 % scatter(0,oneoff)
